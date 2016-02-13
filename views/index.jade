@@ -1,0 +1,50 @@
+extends layout
+
+block content
+  +carousel#myCarousel(count=3, active=1, glyphiconLeft='chevron-left', glyphiconRight='chevron-right')
+    +carousel-item
+      +img(alt='First slide', data-src='holder.js/1140x500/auto/#777:#7a7a7a/text:First slide')
+      +container
+        +carousel-caption
+          +h1
+            | Example headline.
+          +p
+            | Note: If you're viewing this page via a
+            +code
+              | file://
+            | URL, the "next" and "previous" Glyphicon buttons
+            | on the left and right might not load/display properly
+            | due to web browser security rules.
+          +p
+            +abtn()(lg, primary)
+              | Sign up today
+    +carousel-item()(active)
+      +img(alt='Second slide', data-src='holder.js/1140x500/auto/#666:#6a6a6a/text:Second slide')
+      +container
+        +carousel-caption
+          +h1
+            | Another example headline.
+          +p
+              | Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+              | Donec id elit non mi porta gravida at eget metus.
+              | Nullam id dolor id nibh ultricies vehicula ut id elit.
+          +p
+            +abtn()(lg, primary)
+              | Learn more
+    +carousel-item
+      +img(alt='Third slide', data-src='holder.js/1140x500/auto/#555:#5a5a5a/text:Third slide')
+      +container
+        +carousel-caption
+          +h1
+            | One more for good measure.
+          +p
+            | Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+            | Donec id elit non mi porta gravida at eget metus.
+            | Nullam id dolor id nibh ultricies vehicula ut id elit.
+          +p
+            +abtn()(lg, primary)
+              | Browse gallery
+
+  h1= title
+  p Welcome to #{title}
+  // /container

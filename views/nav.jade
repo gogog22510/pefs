@@ -1,0 +1,46 @@
+// Fixed navbar
+nav(class='navbar navbar-inverse navbar-fixed-top')
+  div.container
+    div.navbar-header
+      button(
+        type='button'
+        class='navbar-toggle collapsed'
+        data-toggle='collapse'
+        data-target='#navbar'
+        aria-expanded='false'
+        aria-controls='navbar'
+      )
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a(class='navbar-brand', href='#') Myapp
+    div(id='navbar', class='navbar-collapse collapse')
+      ul(class='nav navbar-nav')
+        li.active: a(href='#') Home
+        li: a(href='#about') About
+        li: a(href='#contact') Contact
+        li.dropdown
+          a(
+            href='#'
+            class='dropdown-toggle'
+            data-toggle='dropdown'
+            role='button' aria-haspopup='true'
+            aria-expanded='false'
+          ) Dropdown
+            span.caret
+          ul.dropdown-menu
+            li: a(href='#') Action
+            li: a(href='#') Another action
+            li: a(href='#') Something else here
+            li(role='separator', class='divider')
+            li.dropdown-header Nav header
+            li: a(href='#') Separated link
+            li: a(href='#') One more separated link
+      form(class='navbar-form navbar-right')
+        div(class='form-group')
+          input(type='text', placeholder='Username', class='form-control')
+        div(class='form-group')
+          input(type='password', placeholder='Password', class='form-control')
+        button(type='submit', class='btn btn-success') Sign in
+    ///.nav-collapse
